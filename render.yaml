@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: jobhub-backend
+    env: python
+    buildCommand: ""
+    startCommand: python manage.py
+    plan: free
