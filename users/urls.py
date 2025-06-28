@@ -5,7 +5,7 @@ from .views import UserListView
 from .views import user_profile
 from .views import LoginView
 from django.urls import path
-from .views import UserProfileView
+from .views import UserProfileView, UpdateProfileView
 
 urlpatterns = [
   
@@ -15,4 +15,5 @@ urlpatterns = [
     # path('profile/', user_profile, name='user-profile'), 
     # path('profile/', UserDetailView.as_view(), name='user-profile'),
     path('profile/', UserProfileView.as_view(), name='user-profile'), 
+    path('profile/update/', UpdateProfileView.as_view(), name='update-profile'),
 ]

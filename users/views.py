@@ -81,3 +81,10 @@ def user_profile(request):
         'prenom': user.first_name,
         'email': user.email
     })
+
+class UpdateProfileView(generics.UpdateAPIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = UserProfileSerializer
+    
+    def get_object(self):
+        return self.request.user
